@@ -1,0 +1,25 @@
+{
+  "Group": "games.papercraft",
+  "Name": "MotivationsOfGaia",
+  "Version": "1.0.0",
+  "Description": "Motivations of Gaia Hytale Mod",
+  "Authors": [
+    {
+      "Name": "Rose - Papercraft Games",
+      "Email": "rose@papercraft.games",
+      "Url": "https://papercraft.games"
+    },
+    {
+      "Name": "RyAnne - Papercraft Games",
+      "Email": "ryanne@papercraft.games",
+      "Url": "https://papercraft.games"
+    }
+  ],
+  "Website": "https://motivationsofgaia.papercraft.games",
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "DisabledByDefault": false,
+  "IncludesAssetPack": true,
+  "Main": "games.papercraft.MotivationsOfGaia"
+}

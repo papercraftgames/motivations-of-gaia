@@ -1,0 +1,149 @@
+{
+  "$Title": "[ROOT] Weighted Assignments",
+  "$Position": {
+    "$x": -2134,
+    "$y": 8589
+  },
+  "Type": "FieldFunction",
+  "ExportAs": "OrbTemple_Assignments",
+  "FieldFunction": {
+    "$Position": {
+      "$x": -1431,
+      "$y": 8585
+    },
+    "Type": "SimplexNoise2D",
+    "Skip": false,
+    "Lacunarity": 2,
+    "Persistence": 0.5,
+    "Octaves": 1,
+    "Scale": 150,
+    "Seed": "1235"
+  },
+  "Delimiters": [
+    {
+      "$Position": {
+        "$x": -514,
+        "$y": 8317
+      },
+      "Max": 0.775,
+      "Min": 0.6,
+      "Assignments": {
+        "$Position": {
+          "$x": -30,
+          "$y": 8302
+        },
+        "Type": "Constant",
+        "Prop": {
+          "$Position": {
+            "$x": 589,
+            "$y": 8297
+          },
+          "Type": "Union",
+          "Skip": false,
+          "Props": [
+            {
+              "$Position": {
+                "$x": 1265,
+                "$y": 8248
+              },
+              "Type": "Prefab",
+              "Skip": false,
+              "WeightedPrefabPaths": [
+                {
+                  "$Position": {
+                    "$x": 1999,
+                    "$y": 7922
+                  },
+                  "Path": "MotivationsOfGaia/Structures/OrbTemple/OrbTemple.prefab.json",
+                  "Weight": 10
+                }
+              ],
+              "LegacyPath": false,
+              "LoadEntities": true,
+              "Directionality": {
+                "$Position": {
+                  "$x": 2025,
+                  "$y": 8418
+                },
+                "Type": "Random",
+                "Seed": "A",
+                "Pattern": {
+                  "$Position": {
+                    "$x": 2638,
+                    "$y": 8433
+                  },
+                  "Type": "Floor",
+                  "Skip": false,
+                  "Origin": {
+                    "$Position": {
+                      "$x": 3263,
+                      "$y": 8414
+                    },
+                    "Type": "BlockType",
+                    "Skip": false,
+                    "Material": {
+                      "$Position": {
+                        "$x": 3872,
+                        "$y": 8419
+                      },
+                      "Solid": "Empty"
+                    }
+                  },
+                  "Floor": {
+                    "$Position": {
+                      "$x": 3259,
+                      "$y": 8614
+                    },
+                    "Type": "BlockSet",
+                    "Skip": false,
+                    "BlockSet": {
+                      "$Position": {
+                        "$x": 3876,
+                        "$y": 8621
+                      },
+                      "Inclusive": true,
+                      "Materials": [
+                        {
+                          "$Position": {
+                            "$x": 4351,
+                            "$y": 8624
+                          },
+                          "Solid": "Soil_Grass"
+                        },
+                        {
+                          "$Position": {
+                            "$x": 4351,
+                            "$y": 8773
+                          },
+                          "Solid": "Soil_Grass_Deep"
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "Scanner": {
+                "$Position": {
+                  "$x": 2021,
+                  "$y": 8590
+                },
+                "Type": "ColumnLinear",
+                "Skip": false,
+                "MaxY": 1000,
+                "MinY": -1000,
+                "RelativeToPosition": false,
+                "BaseHeightName": "Base",
+                "TopDownOrder": true,
+                "ResultCap": 1
+              },
+              "MoldingDirection": "None",
+              "MoldingChildren": false
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "$WorkspaceID": "HytaleGenerator - Assignments",
+  "$Groups": []
+}

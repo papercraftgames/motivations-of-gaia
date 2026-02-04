@@ -1,0 +1,396 @@
+{
+	"$Title":	"[ROOT] Biome",
+	"$Position":	{
+		"$x":	-4228,
+		"$y":	-4226
+	},
+	"Name":	"Basic",
+	"Terrain":	{
+		"$Position":	{
+			"$x":	-3366,
+			"$y":	-4882
+		},
+		"Type":	"DAOTerrain",
+		"Density":	{
+			"$Position":	{
+				"$x":	-3160,
+				"$y":	-4896
+			},
+			"Type":	"Sum",
+			"Skip":	false,
+			"Inputs":	[{
+					"$Position":	{
+						"$x":	-2522,
+						"$y":	-5102
+					},
+					"Type":	"SimplexNoise2D",
+					"Skip":	false,
+					"Lacunarity":	10,
+					"Persistence":	0.05,
+					"Octaves":	1,
+					"Scale":	150,
+					"Seed":	"A"
+				}, {
+					"$Position":	{
+						"$x":	-2526,
+						"$y":	-4727
+					},
+					"Type":	"CurveMapper",
+					"Skip":	false,
+					"Curve":	{
+						"$Position":	{
+							"$x":	-1905,
+							"$y":	-4491
+						},
+						"Type":	"Manual",
+						"Points":	[{
+								"$Position":	{
+									"$x":	-1252,
+									"$y":	-4633
+								},
+								"In":	0,
+								"Out":	1
+							}, {
+								"$Position":	{
+									"$x":	-1245,
+									"$y":	-4481
+								},
+								"In":	50,
+								"Out":	-1
+							}]
+					},
+					"Inputs":	[{
+							"$Position":	{
+								"$x":	-1888,
+								"$y":	-4737
+							},
+							"Type":	"BaseHeight",
+							"Skip":	false,
+							"BaseHeightName":	"Base",
+							"Distance":	true
+						}]
+				}]
+		}
+	},
+	"MaterialProvider":	{
+		"$Position":	{
+			"$x":	-3434,
+			"$y":	-4060
+		},
+		"Type":	"Solidity",
+		"Solid":	{
+			"$Position":	{
+				"$x":	-2735,
+				"$y":	-4075
+			},
+			"Type":	"Queue",
+			"Queue":	[{
+					"$Position":	{
+						"$x":	-2095,
+						"$y":	-4064
+					},
+					"Type":	"Constant",
+					"Material":	{
+						"$Position":	{
+							"$x":	-1452,
+							"$y":	-4072
+						},
+						"Solid":	"Rock_Stone"
+					}
+				}]
+		},
+		"Empty":	{
+			"$Position":	{
+				"$x":	-2763,
+				"$y":	-3479
+			},
+			"Type":	"Queue",
+			"Queue":	[{
+					"$Comment":	"REQUIRED",
+					"$Position":	{
+						"$x":	-2103,
+						"$y":	-3465
+					},
+					"Type":	"Constant",
+					"Material":	{
+						"$Position":	{
+							"$x":	-1460,
+							"$y":	-3460
+						},
+						"Solid":	"Empty"
+					}
+				}]
+		}
+	},
+	"Props":	[
+		{
+			"$Position":	{
+				"$x":	-2435,
+				"$y":	-3018
+			},
+			"Skip":	false,
+			"Runtime":	0,
+			"Positions":	{
+				"$Position":	{
+					"$x":	-1843,
+					"$y":	-3106
+				},
+				"Type":	"Mesh2D",
+				"Skip":	false,
+				"PointsY":	0,
+				"PointGenerator":	{
+					"$Position":	{
+						"$x":	-1145,
+						"$y":	-3182
+					},
+					"Type":	"Mesh",
+					"Jitter":	0,
+					"ScaleX":	20,
+					"ScaleY":	40,
+					"ScaleZ":	20,
+					"Seed":	"A"
+				}
+			},
+			"Assignments":	{
+				"$Position":	{
+					"$x":	-1903,
+					"$y":	-2842
+				},
+				"Type":	"Constant",
+				"Prop":	{
+					"Type":	"Prefab",
+					"WeightedPrefabPaths": [
+						{
+							"Path": "MotivationsOfGaia/Structures/OrbTemple",
+							"Weight": 1
+						}
+					],
+					"$Position":	{
+						"$x":	-1277,
+						"$y":	-2834
+					},
+					"Skip":	false,
+					"Range":	{
+						"$Position":	{
+							"$x":	-457,
+							"$y":	-2692
+						},
+						"X":	2,
+						"Y":	2,
+						"Z":	2
+					},
+					"Pattern":	{
+						"$Position":	{
+							"$x":	-633,
+							"$y":	-2996
+						},
+						"Type":	"Floor",
+						"Skip":	false,
+						"Origin":	{
+							"$Position":	{
+								"$x":	18,
+								"$y":	-3095
+							},
+							"Type":	"BlockType",
+							"Skip":	false,
+							"Material":	{
+								"$Position":	{
+									"$x":	648,
+									"$y":	-3100
+								}
+							}
+						},
+						"Floor":	{
+							"$Position":	{
+								"$x":	17,
+								"$y":	-2943
+							},
+							"Type":	"BlockType",
+							"Skip":	false,
+							"Material":	{
+								"$Position":	{
+									"$x":	651,
+									"$y":	-2941
+								},
+								"Solid":	"Rock_Stone"
+							}
+						}
+					},
+					"Scanner":	{
+						"$Position":	{
+							"$x":	15,
+							"$y":	-2790
+						},
+						"Type":	"ColumnLinear",
+						"Skip":	false,
+						"MaxY":	320,
+						"MinY":	0,
+						"RelativeToPosition":	false,
+						"TopDownOrder":	true,
+						"ResultCap":	1
+					}
+				}
+			}
+		},
+		{
+			"$Position":	{
+				"$x":	2630,
+				"$y":	4941
+			},
+			"Type":	"Prefab",
+			"Skip":	false,
+			"WeightedPrefabPaths":	[{
+				"$Position":	{
+					"$x":	3403,
+					"$y":	4721
+				},
+				"Path":	"Trees/Oak/Stage_0",
+				"Weight":	60
+			}, {
+				"$Position":	{
+					"$x":	3401,
+					"$y":	4903
+				},
+				"Path":	"Trees/Beech/Stage_0",
+				"Weight":	20
+			}],
+			"LegacyPath":	false,
+			"LoadEntities":	true,
+			"Directionality":	{
+				"$Position":	{
+					"$x":	3390,
+					"$y":	5111
+				},
+				"Type":	"Random",
+				"Seed":	"A",
+				"Pattern":	{
+					"$Position":	{
+						"$x":	4036,
+						"$y":	5100
+					},
+					"Type":	"Floor",
+					"ExportAs":	"Plains1_OakPattern_Floor_Trees",
+					"Skip":	false,
+					"Origin":	{
+						"$Position":	{
+							"$x":	4684,
+							"$y":	4932
+						},
+						"Type":	"BlockSet",
+						"Skip":	false,
+						"BlockSet":	{
+							"$Position":	{
+								"$x":	5316,
+								"$y":	4937
+							},
+							"Inclusive":	true,
+							"Materials":	[{
+								"$Position":	{
+									"$x":	5818,
+									"$y":	4901
+								},
+								"Solid":	"Empty"
+							}]
+						}
+					},
+					"Floor":	{
+						"$Position":	{
+							"$x":	4629,
+							"$y":	5285
+						},
+						"Type":	"BlockSet",
+						"Skip":	false,
+						"BlockSet":	{
+							"$Position":	{
+								"$x":	5288,
+								"$y":	5295
+							},
+							"Inclusive":	true,
+							"Materials":	[{
+								"$Position":	{
+									"$x":	6005,
+									"$y":	5239
+								},
+								"Solid":	"Soil_Grass"
+							}, {
+								"$Position":	{
+									"$x":	6028,
+									"$y":	5439
+								},
+								"Solid":	"Soil_Grass_Sunny"
+							}, {
+								"$Position":	{
+									"$x":	6009,
+									"$y":	5650
+								},
+								"Solid":	"Soil_Grass_Full"
+							}, {
+								"$Position":	{
+									"$x":	6030,
+									"$y":	5870
+								},
+								"Solid":	"Soil_Pathway"
+							}, {
+								"$Position":	{
+									"$x":	6015,
+									"$y":	6049
+								},
+								"Solid":	"Soil_Leaves"
+							},
+								{
+									"$Position":	{
+										"$x":	651,
+										"$y":	-2941
+									},
+									"Solid":	"Rock_Stone"
+								}
+							]
+						}
+					}
+				}
+			},
+			"Scanner":	{
+				"$Position":	{
+					"$x":	3386,
+					"$y":	5280
+				},
+				"Type":	"ColumnLinear",
+				"Skip":	false,
+				"MaxY":	60,
+				"MinY":	0,
+				"RelativeToPosition":	false,
+				"BaseHeightName":	"Base",
+				"TopDownOrder":	true,
+				"ResultCap":	1
+			},
+			"MoldingDirection":	"None",
+			"MoldingChildren":	false
+		}
+	],
+	"EnvironmentProvider":	{
+		"$Position":	{
+			"$x":	-3336,
+			"$y":	-2918
+		},
+		"Type":	"Constant",
+		"Environment":	"Env_Zone1_Plains"
+	},
+	"TintProvider":	{
+		"$Position":	{
+			"$x":	-3329,
+			"$y":	-2706
+		},
+		"Type":	"Constant",
+		"Color":	"#5b9e28"
+	},
+	"$WorkspaceID":	"HytaleGenerator - Biome",
+	"$Groups":	[{
+			"$Position":	{
+				"$x":	-3188.3125,
+				"$y":	-5176.3125
+			},
+			"$width":	2362.3125,
+			"$height":	938.9375,
+			"$name":	"Base"
+		}]
+}
